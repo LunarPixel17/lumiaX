@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LumiaX OS is a lightweight and innovative operating system developed by xbitlet studio. It offers a seamless user experience with a focus on simplicity, performance, and compatibility.   run efficiently on older hardware and low-resource devices, LumiaX OS introduces a modern approach to multitasking and productivity. With a clear and easy-to-navigate user interface, this OS ensures high-speed performance and minimal system resource usage. LumiaX OS is scheduled for release in the second quarter of 2025, making it an exciting choice for users seeking efficiency and innovation.">
+    <title>LumiaX OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <style>
+      body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    background-color: #101010;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+h1 {
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+}
+h4 {
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.8;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+}
+.button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #5B42F3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #AF40FF;
+}
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+.card {
+    width: 300px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(151, 65, 252, 0.4) 0 20px 40px -5px;
+}
+.card__content {
+    background: rgb(5, 6, 45);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.card__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.card__text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: center;
+}
+#cards-section {
+    margin-top: 20vh;
+    padding-bottom: 40px;
+    width: 100%;
+}
+       
+button {
+position: relative;
+padding: 12px 35px;
+background: #00DDEB;
+font-size: 17px;
+font-weight: 500;
+color: #181818;
+border: 3px solid #00DDEB;
+border-radius: 8px;
+box-shadow: 0 0 0 #AF40FF;
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+top: 30px; /* تحريك الزر للأسفل */
+}
+
+
+.star-1 {
+position: absolute;
+top: 20%;
+left: 20%;
+width: 25px;
+height: auto;
+filter: drop-shadow(0 0 0 #fffdef);
+z-index: -5;
+transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+position: absolute;
+top: 45%;
+left: 45%;
+width: 15px;
+height: auto;
+filter: drop-shadow(0 0 0 #fffdef);
+z-index: -5;
+transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+position: absolute;
+top: 40%;
+left: 40%;
+width: 5px;
+height: auto;
+filter: drop-shadow(0 0 0 #fffdef);
+z-index: -5;
+transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+position: absolute;
+top: 20%;
+left: 40%;
+width: 8px;
+height: auto;
+filter: drop-shadow(0 0 0 #fffdef);
+z-index: -5;
+transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+position: absolute;
+top: 25%;
+left: 45%;
+width: 15px;
+height: auto;
+filter: drop-shadow(0 0 0 #fffdef);
+z-index: -5;
+transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+position: absolute;
+top: 5%;
+left: 50%;
+width: 5px;
+height: auto;
+filter: drop-shadow(0 0 0 #fffdef);
+z-index: -5;
+transition: all 0.8s ease;
+}
+
+button:hover {
+background: transparent;
+color: #00DDEB;
+box-shadow: 0 0 25px #00DDEB;
+}
+
+button:hover .star-1 {
+position: absolute;
+top: -80%;
+left: -30%;
+width: 25px;
+height: auto;
+filter: drop-shadow(0 0 10px #fffdef);
+z-index: 2;
+}
+
+button:hover .star-2 {
+position: absolute;
+top: -25%;
+left: 10%;
+width: 15px;
+height: auto;
+filter: drop-shadow(0 0 10px #fffdef);
+z-index: 2;
+}
+
+button:hover .star-3 {
+position: absolute;
+top: 55%;
+left: 25%;
+width: 5px;
+height: auto;
+filter: drop-shadow(0 0 10px #fffdef);
+z-index: 2;
+}
+
+button:hover .star-4 {
+position: absolute;
+top: 30%;
+left: 80%;
+width: 8px;
+height: auto;
+filter: drop-shadow(0 0 10px #fffdef);
+z-index: 2;
+}
+
+button:hover .star-5 {
+position: absolute;
+top: 25%;
+left: 115%;
+width: 15px;
+height: auto;
+filter: drop-shadow(0 0 10px #fffdef);
+z-index: 2;
+}
+
+button:hover .star-6 {
+position: absolute;
+top: 5%;
+left: 60%;
+width: 5px;
+height: auto;
+filter: drop-shadow(0 0 10px #fffdef);
+z-index: 2;
+}
+
+.fil0 {
+fill: #fffdef;
+}
+
+.background-light.hidden {
+    opacity: 0;
+}
+/* تأثير الإضاءة في الخلفية */
+.background-light {
+    position: fixed;
+    bottom: 0; /* الإضاءة تظهر من الأسفل */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(93, 62, 255, 0.5), rgba(0, 255, 255, 0.0));
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(50px);
+}
+/* تأثير الإضاءة */
+.background::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    transform: translate(-50%, -50%) scale(1);
+    animation: glow 6s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+@keyframes glow {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.9;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100vh;">
+        <h1>LumiaX OS</h1>
+        <h4>LumiaX system is not just a technical structure, but a force that transforms ideas into reality, built on foundations of innovation and resilience.</h4>
+        <button onclick="scrollToCards()">
+            Explore Features
+          <div class="star-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              version="1.1"
+              style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 784.11 815.53"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs></defs>
+              <g id="Layer_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                <path
+                  class="fil0"
+                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="star-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              version="1.1"
+              style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 784.11 815.53"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs></defs>
+              <g id="Layer_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                <path
+                  class="fil0"
+                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="star-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              version="1.1"
+              style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 784.11 815.53"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs></defs>
+              <g id="Layer_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                <path
+                  class="fil0"
+                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="star-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              version="1.1"
+              style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 784.11 815.53"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs></defs>
+              <g id="Layer_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                <path
+                  class="fil0"
+                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="star-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              version="1.1"
+              style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 784.11 815.53"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs></defs>
+              <g id="Layer_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                <path
+                  class="fil0"
+                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="star-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              version="1.1"
+              style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 784.11 815.53"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs></defs>
+              <g id="Layer_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                <path
+                  class="fil0"
+                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </button>          
+    </div>
+
+    <!-- مجموعة البطاقات -->
+    <div id="cards-section">
+        <div class="card-group">
+            <!-- البطاقة الأولى -->
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__title">What is LumiaX OS?</div>
+                    <div class="card__text">LumiaX OS is a lightweight operating system developed by <strong>xbitlet studio</strong>. It is designed to offer a simple and seamless user experience while maintaining high performance and low resource usage.</div>
+                </div>
+            </div>
+            <!-- البطاقة الثانية -->
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__title">What are its key features?</div>
+                    <div class="card__text">
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li><strong>Lightweight:</strong> Does not require much system resources.</li>
+                            <li><strong>Simple UI:</strong> Clear and easy-to-use interface.</li>
+                            <li><strong>Fast Performance:</strong> Smooth multitasking experience.</li>
+                            <li><strong>Older Devices Support:</strong> Runs efficiently on older hardware.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- البطاقة الثالثة -->
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__title">Who developed LumiaX OS?</div>
+                    <div class="card__text">LumiaX OS is developed by <strong>xbitlet studio</strong>, aiming to provide an innovative and efficient operating system for devices with limited resources.</div>
+                </div>
+            </div>
+            <!-- البطاقة الرابعة -->
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__title">When will it be released?</div>
+                    <div class="card__text">LumiaX OS is expected to be released in the <strong>second quarter of 2025</strong>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="linfo">
+    
+      </div>
+      <div class="customUI">
+       
+        <h1>
+          Custom UI
+        </h1>
+        <div class="content">
+          <div class="text">
+            <div class="kernel-info">
+              <h4>
+                In LumiaX, you can customize your UI as you like. You can change the color of the UI, the font, the icons, and the size of the icons. You can also add widgets to the home screen, making your experience unique and personal.
+              </h4>
+            </div>
+          </div>
+          <div class="video">
+            <video class="video-element" width="560" height="315" autoplay loop muted>
+              <source src="254.02.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="kernel-info">
+        <h1>
+          Artificial Intelligence (AI)
+        </h1>
+        <div class="section">
+          <h2 class="question-title"> What is Axon AI?</h2>
+            <h4>
+                LumiaX OS is powered by advanced artificial intelligence algorithms that enhance the user experience. 
+                Our AI, called Axon AI, can assist you with daily tasks and simplify your life. 
+                Axon AI also supports developers in creating apps and games. 
+                You can interact with Axon AI by saying "Hey Axon" or typing your question in the Axon AI chat, and it will provide the help you need.
+                The AI capabilities of LumiaX OS include voice recognition, predictive text input, and smart suggestions. 
+
+                These features help users interact with their devices more efficiently and intuitively, making everyday tasks easier and more convenient.
+                Our AI, called Axon AI, can assist you with daily tasks and simplify your life. Axon AI also supports developers in creating apps and games. You can interact with Axon AI by saying "Hey Axon" or typing your question in the Axon AI chat, and it will provide the help you need.
+                Axon AI is a <a href="https://en.wikipedia.org/wiki/Large_language_model" style="color:#4A90E2; text-decoration: underline; font-weight: bold;">large language model (LLM)</a> that understands more than 100 languages, making it a versatile tool for various tasks and inquiries.
+            </h4>
+          </div>
+          
+        
+        <h1>My NoteA</h1>
+        <div class="section">
+          <h2 class="question-title">What is the My NoteA framework </h2>
+          <h4>
+            My NoteA is a framework developed by xbitlet studio for developers to create applications for LumiaX OS. 
+            It provides a set of tools, libraries, and APIs that enable developers to build high-quality apps for the LumiaX operating system.
+          </h4>
+          <h2 class="question-title">The My NoteA framework includes features such as:</h2>
+          <h4>
+            <ul>
+              <li>UI components and design templates</li>
+              <li>Integration with Axon AI for voice commands and natural language processing</li>
+              <li>Support for multiple programming languages, including C++, Python, and JavaScript</li>
+              <li>Access to system resources and hardware features</li>
+              <li>Compatibility with the LumiaX OS</li>
+            </ul>
+            Developers can use the My NoteA framework to create a wide range of applications, from productivity tools and games to multimedia apps and utilities. With its intuitive design and powerful features, My NoteA simplifies the app development process and enables developers to create innovative and engaging experiences for LumiaX OS users.
+            The templates in the My NoteA framework are designed to be responsive and customizable, allowing developers to create apps that adapt to different screen sizes and resolutions. The framework also includes built-in support for dark mode and light mode, making it easy to create apps that match the user's preferences.
+          </h4>
+          <h2 class="question-title">The templates in My NoteA include:</h2>
+          <h4>
+            <ul>
+              <li><strong>Neoxs UI:</strong> for creating modern and sleek interfaces</li>
+              <li><strong>WebX:</strong> for web development</li>
+              <li><strong>My OS:</strong> for making your own operating system</li>
+              <li><strong>Consoles App:</strong> for creating console applications</li>
+            </ul>
+          </h4>
+      </div>
+    </div>
+      <style>
+        /* تنسيق الحاوية الرئيسية */
+        .customUI {
+          margin: 40px auto;
+          padding: 20px;
+          max-width: 1200px;
+          font-family: 'Arial', sans-serif;
+          color: #333;
+        }
+      
+        /* تحسين عنوان الصفحة */
+        .customUI h1 {
+          font-size: 2.5rem;
+          text-align: center;
+          background: white;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; /* يجعل النص شفافًا لإظهار التدرج */
+          font-size: 3rem;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      
+        /* جعل النص والفيديو بجانب بعضهما */
+        .content {
+          display: flex;
+          flex-wrap: wrap; /* يجعل المحتوى متجاوبًا على الشاشات الصغيرة */
+          align-items: center;
+          gap: 30px; /* مسافة بين النص والفيديو */
+        }
+      
+        /* تنسيق النص */
+        .text {
+          flex: 1; /* تأخذ النصوص المساحة المتبقية */
+          text-align: left; /* محاذاة النص إلى اليسار */
+          line-height: 1.8; /* تحسين المسافات بين الأسطر */
+          font-size: 1.1rem;
+        }
+      
+        .text h4 {
+          margin: 0;
+          padding: 0;
+        }
+        
+        .AI {
+          margin: 40px auto;
+          padding: 20px;
+          max-width: 1200px;
+          font-family: 'Arial', sans-serif;
+          color: #333;
+        }
+      
+        /* تحسين عنوان الصفحة */
+        .AI h1 {
+          font-size: 2.5rem;
+          text-align: center;
+          background: white;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; /* يجعل النص شفافًا لإظهار التدرج */
+          font-size: 3rem;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      
+        /* جعل النص والفيديو بجانب بعضهما */
+        .content {
+          display: flex;
+          flex-wrap: wrap; /* يجعل المحتوى متجاوبًا على الشاشات الصغيرة */
+          align-items: center;
+          gap: 30px; /* مسافة بين النص والفيديو */
+        }
+      
+        /* تنسيق النص */
+        .text {
+          flex: 1; /* تأخذ النصوص المساحة المتبقية */
+          text-align: left; /* محاذاة النص إلى اليسار */
+          line-height: 1.8; /* تحسين المسافات بين الأسطر */
+          font-size: 1.1rem;
+        }
+      
+        .text h4 {
+          margin: 0;
+          padding: 0;
+        }
+
+        /* تحسين مظهر الفيديو */
+        .video {
+          flex-shrink: 0; /* يمنع الفيديو من التصغير */
+          position: relative; /* يسمح بإضافة تأثير */
+          width: 100%;
+          max-width: 600px; /* ضبط أقصى عرض للفيديو */
+        }
+      
+        /* تأثير Glow حول الفيديو */
+        .video::before {
+          content: '';
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left:  0px;
+          right: 0px;
+          border-radius: 5px;
+          box-shadow: rgba(151, 65, 252, 0.4) 0 20px 40px -5px;
+          filter: blur(20px);
+          z-index: -1;
+        }
+      
+        /* تحسين زوايا الفيديو */
+        .video-element {
+          border-radius: 15px; /* زوايا دائرية للفيديو */
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* إضافة ظل خفيف */
+          overflow: hidden;
+        }
+      
+        /* استجابة للموبايل */
+        @media (max-width: 768px) {
+          .content {
+            flex-direction: column; /* جعل النص والفيديو فوق بعضهما */
+            align-items: center;
+          }
+      
+          .text {
+            text-align: center; /* النص في الوسط على الشاشات الصغيرة */
+          }
+      
+          .video {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      </style>
+<div class="kernel-info">
+  <h1>Kernel</h1>
+  
+  <div class="section">
+    <h4>
+      LumiaX OS is built on the LXK (LumiaX Kernel), optimized for performance and efficiency. This kernel provides a stable and reliable foundation for the operating system, ensuring smooth operation and minimal resource usage. With a focus on security and compatibility, the LumiaX OS kernel creates a secure environment for users to work and play.
+    </h4>
+  </div>
+  
+  <div class="section">
+    <h2 class="question-title">What is a Kernel?</h2>
+    <h4>
+      The kernel is the core component of an operating system that manages system resources, such as memory, processes, and hardware devices. It acts as an intermediary between hardware and software, allowing applications to communicate with the hardware and access system resources. The kernel ensures the operating system runs smoothly and efficiently by providing essential services and functions.
+      Learn more about <a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)#:~:text=A%20kernel%20is%20a%20computer,mitigating%20conflicts%20between%20different%20processes." style="color:#4A90E2; text-decoration: underline; font-weight: bold;">kernels</a>.
+    </h4>
+  </div>
+  
+  <div class="section">
+    <h2 class="question-title">What is LXK?</h2>
+    <h4>
+      LXK (LumiaX Kernel) is a custom kernel developed by xbitlet studio for LumiaX OS. It is designed to provide a stable and efficient foundation for the operating system, ensuring high performance and low resource usage. The LXK kernel is optimized for modern hardware and offers a secure, reliable environment for users to work and play. With a strong focus on security and compatibility, LXK delivers essential services and functions that support LumiaX OS's seamless operation.
+    </h4>
+  </div>
+
+  <h1>Features</h1>
+  <div class="section">
+    <h2 class="question-title">Key Features of LumiaX OS</h2>
+    <h4>
+      Some of the key features of LumiaX OS include:
+      <ul>
+        <li>Lightweight and fast performance</li>
+        <li>Simple and intuitive <a href="https://en.wikipedia.org/wiki/User_interface" style="color:#4A90E2; text-decoration: underline; font-weight: bold;">user interface</a></li>
+        <li>Efficient multitasking and productivity tools</li>
+        <li>Compatibility with older hardware and low-resource devices</li>
+        <li>Customizable UI and personalization options</li>
+        <li>Enhanced security and privacy features</li>
+      </ul>
+    </h4>
+  <h1>Security</h1>
+  <div class="section">
+    <h2 class="question-title">Security in LumiaX OS</h2>
+    <h4>
+      LumiaX OS prioritizes security and privacy, offering a range of features to protect user data and ensure a safe computing environment. The operating system includes built-in security tools, such as encryption, secure boot, and secure browsing, to safeguard user information and prevent unauthorized access. With regular updates and security patches, LumiaX OS provides ongoing protection against emerging threats and vulnerabilities, keeping users' data secure and private.
+    </h4>
+  <h1>System requirements</h1>
+  <div class="section">
+    <h2 class="question-title">System Requirements for LumiaX OS</h2>
+    <h4>
+      LumiaX OS is designed to run efficiently on a wide range of hardware configurations, including older devices and low-resource systems. The minimum system requirements for LumiaX OS are as follows:
+      <ul>
+        <li><i class="bx bx-chip"></i> Processor: 1 GHz or faster</li>
+        <li><i class="bx bx-memory-card"></i> RAM: 2 GB (64-bit)</li>
+        <li><i class="bx bx-hdd"></i> Storage: 20 GB (64-bit)</li>
+        <li><i class="bx bx-desktop"></i> Graphics: DirectX 12 or later with WDDM 2.0 driver</li>
+        <li><i class="bx bx-tv"></i> Display: 1280x720p resolution</li>
+        <li><i class="bx bx-shield-quarter"></i> System firmware: UEFI, Secure Boot capable</li>
+      </ul>
+      For optimal performance, it is recommended to use a more powerful system with higher specifications.
+    </h4>
+  <h1>Compatibility</h1>
+  <div class="section">
+    <h2 class="question-title">Compatibility with LumiaX OS</h2>
+    <h4>
+      LumiaX OS is compatible with a wide range of hardware devices, including desktops, laptops, tablets, and 2-in-1 devices. The operating system supports both x86 and ARM architectures, making it suitable for a variety of systems. LumiaX OS is designed to run efficiently on older hardware and low-resource devices, providing a smooth and responsive user experience across different platforms. With its lightweight design and optimized performance, LumiaX OS offers compatibility with a diverse range of devices, ensuring users can enjoy the benefits of the operating system on their preferred hardware.
+    </h4>
+  <h1>Performance</h1>
+  <div class="section">
+    <h2 class="question-title">Performance of LumiaX OS</h2>
+    <h4>
+      LumiaX OS is optimized for performance and efficiency, offering a fast and responsive user experience on a wide range of hardware configurations. The operating system is designed to run smoothly on older devices and low-resource systems, providing a seamless multitasking experience and enhanced productivity tools. With its lightweight design and minimal resource usage, LumiaX OS delivers high performance and fast boot times, ensuring users can work and play without delays or interruptions. Whether you're browsing the web, editing documents, or streaming media, LumiaX OS offers reliable performance and efficient operation for all your computing needs.
+    </h4>
+  <h1>Support</h1>
+  <div class="section">
+    <h2 class="question-title">Support for LumiaX OS</h2>
+    <h4>
+      LumiaX OS is supported by xbitlet studio, the developer of the operating system. Users can access online resources, such as documentation, forums, and tutorials, to get help with installation, troubleshooting, and customization. The LumiaX OS community provides a platform for users to share their experiences, ask questions, and connect with other users to learn more about the operating system. With regular updates and support from xbitlet studio, users can rely on LumiaX OS for a secure and efficient computing experience.
+    </h4>
+  <h1>Updates</h1>
+  <div class="section">
+    <h2 class="question-title">Updates for LumiaX OS</h2>
+    <h4>
+      LumiaX OS receives regular updates and security patches to ensure optimal performance and reliability. Users can download and install updates through the operating system's built-in update mechanism, which provides access to the latest features, bug fixes, and security enhancements. With ongoing support from xbitlet studio, LumiaX OS delivers a secure and up-to-date computing experience, keeping users' systems protected and running smoothly. By staying current with updates, users can benefit from new features and improvements that enhance the overall functionality and performance of LumiaX OS.
+    </h4>
+  <h1>Privacy</h1>
+  <div class="section">
+    <h2 class="question-title">Privacy in LumiaX OS</h2>
+    <h4>
+      LumiaX OS prioritizes user privacy and data protection, offering a range of features to safeguard personal information and ensure a secure computing environment.
+      The operating system includes privacy settings and controls that allow users to manage their data and control access to sensitive information.
+      With built-in privacy tools, such as data encryption, secure browsing, and user account controls, LumiaX OS provides a secure and private platform for users to work and play.
+      By prioritizing privacy and data security, LumiaX OS ensures that users can trust their operating system to protect their personal information and maintain a safe computing environment.
+    </h4>
+  <h1>Customization</h1>
+  <div class="section">
+    <h2 class="question-title">Customization in LumiaX OS</h2>
+    <h4>
+      LumiaX OS offers a range of customization options to personalize the user experience and tailor the operating system to individual preferences.
+      Users can customize the desktop background, theme colors, font styles, and icon sizes to create a unique and personalized look for their system.
+      With support for widgets, gadgets, and extensions, LumiaX OS allows users to add additional features and functionality to their desktop, enhancing productivity and convenience.
+      By providing a flexible and customizable environment, LumiaX OS empowers users to create a computing experience that suits their needs and reflects their personal style.
+    </h4>
+  <h1>Accessibility</h1>
+  <div class="section">
+    <h2 class="question-title">Accessibility in LumiaX OS</h2>
+    <h4>
+      LumiaX OS is designed to be accessible to users of all abilities. It includes features and tools that support a diverse range of needs.
+      The operating system includes accessibility settings,
+      such as screen readers,
+      magnifiers, and voice controls, to assist users with visual, auditory, and motor disabilities.
+      With customizable fonts, colors, and interface elements,
+      LumiaX OS offers a flexible and inclusive user experience that accommodates individual preferences and requirements.
+      By prioritizing accessibility and inclusivity, LumiaX OS ensures that all users can access and enjoy the benefits of the operating system, regardless of their abilities or limitations.
+    </h4>
+  <h1>Developer Tools</h1>
+  <div class="section">
+    <h2 class="question-title">Developer Tools for LumiaX OS</h2>
+    <h4>
+      LumiaX OS provides a range of developer tools and resources to support app development and customization.
+      The operating system includes software development kits (SDKs), application programming interfaces (APIs), and development environments that enable developers to create high-quality apps for LumiaX OS.
+      With access to system resources, hardware features, and platform-specific tools,
+      developers can build innovative and engaging applications that leverage the unique capabilities of LumiaX OS.
+      By providing comprehensive developer support and resources,
+      LumiaX OS empowers developers to create apps that enhance the user experience and extend the functionality of the operating system.
+    </h4>
+  <h1>terms of services</h1>
+  <div class="section">
+    <h2 class="question-title">Terms of Services</h2>
+    <h4>
+      By using LumiaX OS, you agree to the following terms of service:
+      <ul>
+        <li>Use of the operating system is subject to the terms and conditions outlined in the End User License Agreement (EULA).</li>
+        <li>Users are responsible for maintaining the security and privacy of their data and accounts.</li>
+        <li>Users must comply with all applicable laws and regulations when using LumiaX OS.</li>
+        <li>Users are prohibited from engaging in illegal or harmful activities while using the operating system.</li>
+        <li>Users are responsible for their actions and behavior while using LumiaX OS.</li>
+      </ul>
+      By using LumiaX OS, you agree to abide by these terms of service and accept the responsibilities outlined in the EULA.
+    </h4>
+
+</div>
+
+<style>
+  /* تنسيق عام للعناصر */
+  .kernel-info {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 40px auto;
+    max-width: 800px;
+    line-height: 1.8;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  /* تنسيق عنوان الصفحة الرئيسي */
+  .kernel-info h1 {
+    font-size: 2.5rem;
+    color: #4A90E2;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(74, 144, 226, 0.3);
+  }
+
+  /* تنسيق العناوين الفرعية للأسئلة */
+  .kernel-info .question-title {
+    font-size: 1.8rem;
+    color: #9E4AE2; /* لون بنفسجي مميز */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(158, 74, 226, 0.3);
+    text-align: left;
+    border-left: 4px solid #9E4AE2;
+    padding-left: 10px;
+  }
+
+  /* تحسين النصوص */
+  .kernel-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  /* تخصيص الروابط */
+  .kernel-info a {
+    color: #4A90E2;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .kernel-info a:hover {
+    color: #003f7f;
+  }
+
+  /* تقسيم الفقرات */
+  .section {
+    margin-bottom: 30px;
+  }
+</style>
+
+      
+    </div>
+    <script>
+        function scrollToCards() {
+            document.getElementById('cards-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
