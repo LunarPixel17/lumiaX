@@ -1,6 +1,7 @@
 # LumiaX OS
 
 LumiaX OS is a lightweight operating system developed by **xbitlet studio**, designed to provide a simple and seamless user experience with high performance and low resource consumption.
+For more information, visit the [LumiaX OS homepage](https://lunarpixel17.github.io/lumiaX/).
 
 ## Key Features
 
@@ -47,5 +48,3 @@ LumiaX OS is expected to be released in the second quarter of 2025.
 ## About xbitlet studio
 
 **xbitlet studio** is a development team dedicated to delivering innovative and efficient operating systems for devices with limited resources.
-
-For more information, visit the [LumiaX OS homepage](https://lunarpixel17.github.io/lumiaX/).
